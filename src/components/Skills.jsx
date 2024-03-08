@@ -1,5 +1,4 @@
 import Title from "/src/components/Title.jsx";
-import Anchor from "/src/components/Anchor.jsx";
 
 function Skills() {
   const skills = [
@@ -28,8 +27,6 @@ function Skills() {
 
   return (
     <>
-      <Anchor id="Skills" />
-
       <Title text="My" bold="Skills" />
       <div className="flex flex-wrap justify-center gap-2">
         {skills.map((skill,index)=>(

@@ -1,5 +1,5 @@
 import Title from "/src/components/Title.jsx"
-import Anchor from "/src/components/Anchor.jsx"
+
 
 function Intro() {
   const links = {
@@ -11,7 +11,6 @@ function Intro() {
 
   return (
     <>
-      <Anchor id="Intro" />
       <Title text="Hi, I'm" bold="Muen" />
       <p className="my-5 text-xl">
         I am a person with a strong curiosity, and it propels me towards the
@@ -21,7 +20,7 @@ function Intro() {
         this approach. In the future, I want to become a full-stack developer
         who knows every detail in software development process.
       </p>
-      <div className="flex flex-wrap justify-evenly">
+      <div className="flex flex-wrap justify-evenly border border-dashed rounded-full">
         {Object.keys(links).map((link, index) => (
           <a className="text-slate-500" key={index} href={links[link]} target="_blank">
             {link}
