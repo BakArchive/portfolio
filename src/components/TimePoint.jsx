@@ -1,4 +1,4 @@
-function TimePoint({ time, role, detail }) {
+function TimePoint({ time, role, sections }) {
   return (
     <li className="relative flex items-baseline gap-6 pb-5">
       <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-gray-400">
@@ -15,7 +15,11 @@ function TimePoint({ time, role, detail }) {
       <div>
         <p className="text-xl text-gray-600">{time}</p>
         <p className="mt-2 text-gray-600">As a {role}</p>
-        <p className="mt-2 text-gray-600">{detail}</p>
+        {sections.map((item, index) => (
+          <p key={index} className="mt-2 text-gray-600">
+            <span className="font-bold">{item.section}: </span>{item.detail}
+          </p>
+        ))}
       </div>
     </li>
   );
