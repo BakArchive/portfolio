@@ -11,10 +11,9 @@ function Nav() {
   const [activeAnchor, setActiveAnchor] = useState(0);
 
   useEffect(() => {
-    const anchors = [...document.querySelectorAll("section")].map(
-      (anchor) => anchor.offsetTop
-    );
+    const sections = document.getElementsByTagName("section");
     const handleScroll = () => {
+      const anchors = [...sections].map((anchor) => anchor.offsetTop);
       let anchorId = 0;
       let minGap = Math.abs(window.scrollY - anchors[0]);
       for (let i = 1; i < anchors.length; ++i) {
@@ -31,7 +30,7 @@ function Nav() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
 
   return (
     <nav className={navClass}>
