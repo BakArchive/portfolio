@@ -14,12 +14,12 @@ function ProjectCard({ name, link, role, description, techniques }) {
           ) : (
             <h2 className="text-2xl font-medium">{name}</h2>
           )}
-          <p className="text-sm mb-2">{role}</p>
-          <p className="text-sm mb-4">{description}</p>
+          <p className="mb-2">{role}</p>
+          <p className="mb-4">{description}</p>
         </div>
         <div className="flex flex-wrap justify-center gap-3">
           {techniques.map((technique, index) => (
-            <p key={index} className="text-xs border border-solid rounded p-1">
+            <p key={index} className="text-sm border border-solid rounded p-1">
               {technique}
             </p>
           ))}

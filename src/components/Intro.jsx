@@ -20,9 +20,9 @@ function Intro() {
         this approach. In the future, I want to become a full-stack developer
         who knows every detail in software development process.
       </p>
-      <div className="flex flex-wrap justify-evenly border border-dashed rounded-full">
+      <div className="flex flex-wrap justify-evenly border border-dashed m-auto rounded-full lg:w-3/4">
         {Object.keys(links).map((link, index) => (
-          <a className="text-slate-500" key={index} href={links[link]} target="_blank">
+          <a className="text-xl text-slate-500" key={index} href={links[link]} target="_blank">
             {link}
           </a>
         ))}
