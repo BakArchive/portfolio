@@ -5,7 +5,7 @@ import Skills from "/src/components/Skills.jsx";
 import Projects from "/src/components/Projects.jsx";
 import Experience from "/src/components/Experience.jsx";
 import Footer from "/src/components/Footer.jsx";
-import { Fade } from "react-awesome-reveal";
+import { Fade } from 'react-awesome-reveal';
 
 function App() {
   const common = "mx-auto w-full px-3 md:px-0 md:w-2/3 pt-0 ";
@@ -16,10 +16,10 @@ function App() {
         <Nav />
       </header>
       <Fade className={common + "lg:w-3/5"}>
-          <Intro />
-          <Skills />
-          <Projects />
-          <Experience />
+        <Intro />
+        <Skills />
+        <Projects />
+        <Experience />
       </Fade>
       <footer className={common}>
         <Footer />

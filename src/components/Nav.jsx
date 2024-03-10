@@ -11,30 +11,36 @@ function Nav() {
   const [activeAnchor, setActiveAnchor] = useState(0);
 
   useEffect(() => {
-    const anchors = document.querySelectorAll("section");
-
+    const anchors = [...document.querySelectorAll("section")].map(
+      (anchor) => anchor.offsetTop
+    );
     const handleScroll = () => {
-      for (let i = 0; i < anchors.length; ++i) {
-        const anchor = anchors[i];
-        const anchorBottom = anchor.offsetTop+anchor.offsetHeight;
-        if (window.scrollY < anchorBottom) {
-          setActiveAnchor(i);
-          break;
-        }
+      let anchorId = 0;
+      let minGap = Math.abs(window.scrollY - anchors[0]);
+      for (let i = 1; i < anchors.length; ++i) {
+        const curGap = Math.abs(window.scrollY - anchors[i]);
+        if (curGap < minGap) {
+          minGap = curGap;
+          anchorId = i;
+        } else break;
       }
+      setActiveAnchor(anchorId);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return ()=> {
-      window.removeEventListener('scroll',handleScroll);
-    }
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
-
 
   return (
     <nav className={navClass}>
       {menu.map((item, index) => (
-        <a key={index} href={"#" + item} className={navItemClass+ (activeAnchor===index? active:'')}>
+        <a
+          key={index}
+          href={"#" + item}
+          className={navItemClass + (activeAnchor === index ? active : "")}
+        >
           {item}
         </a>
       ))}
