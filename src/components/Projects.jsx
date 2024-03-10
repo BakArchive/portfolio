@@ -1,5 +1,6 @@
 import Title from "/src/components/Title.jsx";
 import ProjectCard from "/src/components/ProjectCard.jsx";
+import Anchor from "/src/components/Anchor.jsx";
 
 function Projects() {
   const projects = [
@@ -36,7 +37,9 @@ function Projects() {
     },
   ];
   return (
-    <>
+    <section>
+      <Anchor id="Projects" />
+
       <Title text="My" bold="Projects" />
       <div className="grid grid-cols-12 px-6 lg:px-3 gap-4 md:gap-2 lg:gap-3">
         {projects.map((proj, index) => (
@@ -50,7 +53,7 @@ function Projects() {
           />
         ))}
       </div>
-    </>
+    </section>
   );
 }
 

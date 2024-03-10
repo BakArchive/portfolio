@@ -1,5 +1,4 @@
 import "./App.css";
-import Anchor from "/src/components/Anchor.jsx";
 import Nav from "/src/components/Nav.jsx";
 import Intro from "/src/components/Intro.jsx";
 import Skills from "/src/components/Skills.jsx";
@@ -17,13 +16,9 @@ function App() {
         <Nav />
       </header>
       <Fade className={common + "lg:w-3/5"}>
-          <Anchor id="Intro" />
           <Intro />
-          <Anchor id="Skills" />
           <Skills />
-          <Anchor id="Projects" />
           <Projects />
-          <Anchor id="Experience" />
           <Experience />
       </Fade>
       <footer className={common}>
