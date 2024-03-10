@@ -1,6 +1,6 @@
 function Anchor({id}){
     return (
-        <div id={id} className="h-24"></div>
+        <div id={id} className="h-28"></div>
     )
 }
 
