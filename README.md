@@ -3,9 +3,10 @@
 - Vite
 - ESLint
 - SWC
+- react-awesome-reveal
 
 # TODO
-- [ ] Centralized Configuration
+- [x] Centralized Configuration
 - [ ] Dark Mode
 - [ ] i18n
 

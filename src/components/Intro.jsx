@@ -1,37 +1,27 @@
 import Title from "/src/components/Title.jsx";
 import Anchor from "/src/components/Anchor.jsx";
 
-function Intro() {
-  const links = {
-    Blog: "https://mashiro.best",
-    Linkedin: "https://www.linkedin.com/in/muen-yu-802b29228/",
-    GitHub: "https://github.com/MuenYu",
-    LeetCode: "https://leetcode.com/muenyu/",
-  };
-
+function Intro({data}) {
   return (
     <section>
       <Anchor id="Intro" />
-      <Title text="Hi, I'm" bold="Muen" />
+      <Title text={data.title} bold={data.boldTitle} />
       <p className="my-5 text-xl">
-        I am a person with a strong curiosity, and it propels me towards the
-        field of technology. I can feel my passion and eagerness for new
-        knowledge and open source. I believe that learning by doing is the best
-        strategy for me, and I have gained a lot of practical skills through
-        this approach. In the future, I want to become a full-stack developer
-        who knows every detail in software development process.
+        {data.description}
       </p>
       <div className="flex flex-wrap justify-evenly border border-dashed m-auto rounded-full lg:w-3/4">
-        {Object.keys(links).map((link, index) => (
-          <a
+        {
+          data.links.map((item,index)=>(
+            <a
             className="text-xl text-slate-500"
             key={index}
-            href={links[link]}
+            href={item.link}
             target="_blank"
           >
-            {link}
+            {item.name}
           </a>
-        ))}
+          ))
+        }
       </div>
     </section>
   );

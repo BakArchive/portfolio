@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 
-function Nav() {
+function Nav({data}) {
   const navClass =
     "w-full lg:w-1/3 shadow bg-neutral-50 flex flex-wrap justify-evenly py-2 md:rounded-full";
   const navItemClass = "text-slate-500 rounded-full px-3 py-1 ";
   const active = "bg-neutral-200";
-
-  const menu = ["Intro", "Skills", "Projects", "Experience"];
 
   const [activeAnchor, setActiveAnchor] = useState(0);
 
@@ -34,7 +32,7 @@ function Nav() {
 
   return (
     <nav className={navClass}>
-      {menu.map((item, index) => (
+      {data.map((item, index) => (
         <a
           key={index}
           href={"#" + item}
