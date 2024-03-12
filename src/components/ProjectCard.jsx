@@ -1,6 +1,6 @@
 function ProjectCard({ name, link, role, description, techniques }) {
   return (
-    <div className="rounded-xl bg-white border border-slate-300 col-span-12 md:col-span-6 lg:col-span-4">
+    <div className="rounded-xl bg-white border border-slate-300 col-span-12 md:col-span-6">
       <div className="flex flex-col justify-between p-5 w-full h-full">
         <div>
           {link !== undefined ? (
