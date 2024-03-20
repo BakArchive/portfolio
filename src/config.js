@@ -56,7 +56,6 @@ const config = {
       "AWS",
       "Linux",
       "Docker",
-      "Kubernetes",
     ],
   },
   projects: {
