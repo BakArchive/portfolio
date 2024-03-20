@@ -1,45 +1,25 @@
 import React, { useState, useEffect, useRef } from "react";
+import RouteRule from "@/router";
+import { NavLink } from "react-router-dom";
 
-function Nav({data}) {
-  const navClass =
-    "w-full lg:w-1/3 shadow bg-neutral-50 flex flex-wrap justify-evenly py-2 md:rounded-full";
+function Nav() {
   const navItemClass = "text-slate-500 rounded-full px-3 py-1 ";
   const active = "bg-neutral-200";
 
-  const [activeAnchor, setActiveAnchor] = useState(0);
-
-  useEffect(() => {
-    const sections = document.getElementsByTagName("section");
-    const handleScroll = () => {
-      const anchors = [...sections].map((anchor) => anchor.offsetTop);
-      let anchorId = 0;
-      let minGap = Math.abs(window.scrollY - anchors[0]);
-      for (let i = 1; i < anchors.length; ++i) {
-        const curGap = Math.abs(window.scrollY - anchors[i]);
-        if (curGap < minGap) {
-          minGap = curGap;
-          anchorId = i;
-        } else break;
-      }
-      setActiveAnchor(anchorId);
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
+  const navItems = RouteRule.children;
 
   return (
-    <nav className={navClass}>
-      {data.map((item, index) => (
-        <a
+    <nav className="w-full lg:w-1/3 shadow bg-neutral-50 flex flex-wrap justify-evenly py-2 md:rounded-full">
+      {navItems.map((item, index) => (
+        <NavLink
           key={index}
-          href={"#" + item}
-          className={navItemClass + (activeAnchor === index ? active : "")}
+          to={"/"+(item.path||"")}
+          className={({ isActive }) =>
+            isActive ? navItemClass+active:navItemClass
+          }
         >
-          {item}
-        </a>
+          {item.title}
+        </NavLink>
       ))}
     </nav>
   );
