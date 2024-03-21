@@ -5,10 +5,10 @@ import { Outlet } from "react-router-dom";
 function App() {
   return (
     <>
-      <header className="pt-8 w-full flex justify-center">
+      <header className="py-8 w-full flex justify-center">
         <Nav />
       </header>
-      <main className="pt-10 px-5 w-full md:w-4/5 lg:w-2/3 m-auto flex-1 flex flex-col">
+      <main className="px-5 w-full md:w-4/5 lg:w-3/4 m-auto flex flex-col">
         <Outlet />
       </main>
       <footer className="py-4">
