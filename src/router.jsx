@@ -1,5 +1,6 @@
 import App from "@/layout/App";
 import Error from "@/layout/Error";
+import Home from "@/layout/Home";
 
 const RouteRule = {
   path: "/",
@@ -9,7 +10,7 @@ const RouteRule = {
     {
       title: "Home",
       index: true,
-      element: <div>home</div>,
+      element: <Home />,
     },
     {
       title: "About",

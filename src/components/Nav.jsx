@@ -9,7 +9,7 @@ function Nav() {
   const navItems = RouteRule.children;
 
   return (
-    <nav className="w-full lg:w-1/3 shadow bg-neutral-50 flex flex-wrap justify-evenly py-2 md:rounded-full">
+    <nav className="w-full md:w-4/5 lg:w-1/3 shadow bg-neutral-50 flex flex-wrap justify-evenly py-2 md:rounded-full">
       {navItems.map((item, index) => (
         <NavLink
           key={index}
