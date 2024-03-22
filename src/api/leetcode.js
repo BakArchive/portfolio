@@ -1,4 +1,4 @@
-import {lsFetch, lsStore} from "@/api/common";
+import {lsFetch, lsStore} from "./common.js";
 
 const api = "https://leetcodestats.cyclic.app/";
 const key = "leetcode";
