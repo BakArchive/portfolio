@@ -49,7 +49,7 @@ function Home() {
         </div>
       </div>
       <div className="m-auto md:w-1/3 lg:w-1/2 flex items-center justify-center">
-        <img className="w-2/3 md:w-full" src="/hero.png" />
+        <img className="w-2/3 min-w-52 md:min-w-72 md:w-full" src="/hero.png" />
       </div>
     </div>
   );
