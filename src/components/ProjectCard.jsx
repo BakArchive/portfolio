@@ -1,19 +1,10 @@
-function ProjectCard({ name, link, role, description, techniques }) {
+import { IconLink } from "@tabler/icons-react";
+
+function ProjectCard({ name, link, role, description, techniques, style }) {
   return (
-    <div className="rounded-xl bg-white border border-slate-300 col-span-12 md:col-span-6">
-      <div className="flex flex-col justify-between p-5 w-full h-full">
+    <div className={`relative rounded-xl bg-white border border-slate-300 flex flex-col justify-between p-5 ${style}`}>
         <div>
-          {link !== undefined ? (
-            <a
-              href={link}
-              target="_blank"
-              className="text-2xl font-medium"
-            >
-              {name}
-            </a>
-          ) : (
-            <h2 className="text-2xl font-medium">{name}</h2>
-          )}
+          <h2 className="text-2xl font-medium">{name}</h2>
           <p className="mb-2">{role}</p>
           <p className="mb-4">{description}</p>
         </div>
@@ -24,7 +15,7 @@ function ProjectCard({ name, link, role, description, techniques }) {
             </p>
           ))}
         </div>
-      </div>
+        <a href={link} target="_blank" className="absolute top-5 right-5"><IconLink /></a>
     </div>
   );
 }

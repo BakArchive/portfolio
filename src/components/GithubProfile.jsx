@@ -1,8 +1,7 @@
 import { profile } from "@/api/github";
 import { useEffect, useState } from "react";
 
-function GithubProfile() {
-  const username = "muenyu";
+function GithubProfile({username}) {
   const [data, setData] = useState(null);
   const [state, setState] = useState(0);
 
@@ -23,7 +22,7 @@ function GithubProfile() {
     content = (
       <>
         <figure className="col-span-12 md:col-span-4">
-          <a href={data.url} target="_blank">
+          <a href={data.link} target="_blank">
             <img
               className="rounded-full m-auto w-32 md:w-full"
               src={data.avatar}
