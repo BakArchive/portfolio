@@ -1,10 +1,10 @@
 import generalJsonFetch from "./common.js";
 
-const api = "https://leetcodestats.cyclic.app/";
+const api = "https://leetcodestats.cyclic.app";
 const key = "leetcode";
 
 const leetcode = async (username) => {
-  const url = `${api}${username}`;
+  const url = `${api}/${username}`;
   // store in localstorage
   return generalJsonFetch(url,{},key,trim);
 };
