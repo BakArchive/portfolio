@@ -1,8 +1,8 @@
 import TimePoint from "/src/components/TimePoint.jsx";
 
-function Experience({ data }) {
+function Experience({ data, className }) {
   return (
-    <div className="flex">
+    <div className={`flex ${className || ""}`}>
       <ul>
         {data.map((item, index) => (
           <TimePoint

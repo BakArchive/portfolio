@@ -1,38 +1,31 @@
-import ColorFont from "@/components/ColorFont";
+import Title from "@/components/Title";
+import SectionTitle from "@/components/SectionTitle";
+import Content from "@/components/Content";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import config from "@/config";
 
-// Question: usually, we split component by business or functionality?
 function Resume() {
-  const titleClass = "mt-10 font-medium text-4xl md:text-6xl lg:text-7xl";
-  const subTitleClass = "my-10 font-medium text-2xl md:text-2xl lg:text-4xl";
-  const content = "text-lg md:text-xl lg:text-2xl";
-
   return (
     <>
-      <h1 className={titleClass}>
-        I'm <ColorFont text={config.resume.name} />
-      </h1>
-
-      <section className="mt-10 grid grid-cols-12 gap-5">
-        <div className="col-span-12 lg:col-span-8">
-          <p className={content}>
-            {config.resume.intro}
-          </p>
-        </div>
-        <div className="col-span-12 lg:col-span-4">
+      <Title text="I'm" highlight={config.resume.name} />
+      <section className="my-5 grid grid-cols-12 gap-5">
+        <Content
+          text={config.resume.intro}
+          className="col-span-12 lg:col-span-8"
+        />
+        <figure className="col-span-12 lg:col-span-4">
           <img className="w-64 m-auto" src="/t-rex.svg" />
-        </div>
+        </figure>
       </section>
 
-      <section className="mt-10">
-        <h2 className={`${subTitleClass} text-center`}>My Skill Set</h2>
+      <section className="my-5">
+        <SectionTitle text="My Skill Set" className="text-center mb-5" />
         <Skills data={config.resume.skills} />
       </section>
 
-      <section className="mt-10">
-        <h2 className={`${subTitleClass} text-center`}>My Qualifications</h2>
+      <section className="my-5">
+        <SectionTitle text="My Qualifications" className="text-center mb-5" />
         <div className="grid grid-cols-12 gap-3">
           {config.resume.qualifications.map((item, index) => (
             <div
@@ -55,8 +48,8 @@ function Resume() {
         </div>
       </section>
 
-      <section className="my-10">
-        <h2 className={subTitleClass}>My Experience</h2>
+      <section className="my-5">
+        <SectionTitle text="My Experience" className="mb-5" />
         <Experience data={config.resume.experience} />
       </section>
     </>

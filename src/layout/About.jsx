@@ -1,4 +1,6 @@
-import ColorFont from "@/components/ColorFont";
+import Title from "@/components/Title";
+import SectionTitle from "@/components/SectionTitle";
+import Content from "@/components/Content";
 import LeetCode from "@/components/LeetCode";
 import TMDB from "@/components/TMDB";
 import config from "@/config";
@@ -6,25 +8,19 @@ import config from "@/config";
 function About() {
   return (
     <>
-      <h1 className="my-5 font-medium text-4xl md:text-6xl lg:text-7xl">
-        I'm <ColorFont text={config.about.name} />
-      </h1>
-
+      <Title text="I'm" highlight={config.about.name} />
       {config.about.sections.map((section, index) => (
-        <section key={index}>
-          <h2 className="my-5 font-medium text-2xl md:text-2xl lg:text-4xl">
-            {section.title}
-          </h2>
+        <section className="my-5" key={index}>
+          <SectionTitle text={section.title} />
           {section.type === 0 && (
-            <p className="m-5 text-lg md:text-xl lg:text-2xl">
-              {section.content}
-            </p>
+            <Content text={section.content} className="p-5" />
           )}
           {section.type === 1 && (
             <div className="grid grid-cols-12">
-              <p className={"m-5 text-lg md:text-xl lg:text-2xl col-span-12 md:col-span-6"}>
-                {section.content}
-              </p>
+              <Content
+                text={section.content}
+                className="col-span-12 md:col-span-6 p-5"
+              />
               <div className="col-span-12 md:col-span-6 p-5">
                 <LeetCode username={section.username} />
               </div>
@@ -32,10 +28,8 @@ function About() {
           )}
           {section.type === 2 && (
             <>
-              <p className="text-center m-10 text-xl">{section.content}</p>
-              <div className="m-5">
-                <TMDB list={section.list} secret={section.secret} />
-              </div>
+              <Content text={section.content} className="text-center p-5" />
+              <TMDB list={section.list} secret={section.secret} />
             </>
           )}
         </section>

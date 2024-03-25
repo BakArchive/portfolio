@@ -1,7 +1,7 @@
-function CopyRight() {
+function CopyRight({ className }) {
   const time = new Date().getFullYear();
   return (
-    <p className="text-center">
+    <p className={`text-center ${className || ""}`}>
       Crafted by Muen Yu | &#169;{time} All rights reserved
     </p>
   );

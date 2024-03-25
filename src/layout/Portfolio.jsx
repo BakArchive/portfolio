@@ -1,4 +1,5 @@
-import ColorFont from "@/components/ColorFont";
+import Title from "@/components/Title";
+import SectionTitle from "@/components/SectionTitle";
 import GithubProfile from "@/components/GithubProfile";
 import Projects from "@/components/Projects";
 import config from "@/config"
@@ -6,12 +7,9 @@ import config from "@/config"
 function Portfolio() {
   const username = config.portfolio.github;
 
-  const titleClass = "mt-10 font-medium text-4xl md:text-6xl lg:text-7xl";
   return (
     <>
-      <h1 className={titleClass}>
-        I'm <ColorFont text={config.portfolio.name}/>
-      </h1>
+      <Title text="I'm" highlight={config.portfolio.name} />
       <section className="mt-10 grid grid-cols-12">
         <div className="col-span-12 lg:col-span-7 flex flex-col justify-around">
           <GithubProfile username={username} />
@@ -24,10 +22,8 @@ function Portfolio() {
         </div>
       </section>
 
-      <section>
-        <h2 className="my-5 font-medium text-2xl md:text-2xl lg:text-4xl">
-          {config.portfolio.subTitle}
-        </h2>
+      <section className="my-5">
+        <SectionTitle text={config.portfolio.subTitle} className="mb-5" />
         <Projects username={username} />
       </section>
     </>

@@ -174,7 +174,7 @@ const config = {
   },
   portfolio: {
     name: "productive",
-    subTitle: "Here are all Open Source Project I Involved",
+    subTitle: "All Open Source Project I Involved",
     github: "muenyu",
   },
 };

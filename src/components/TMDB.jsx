@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import tmdb from "@/api/tmdb";
 
-function TMDB({list, secret}) {
+function TMDB({list, secret, className}) {
   const [data, setData] = useState(null);
   const [state, setState] = useState(0); // 0: loading, 1: success, 2: failed
 
@@ -41,7 +41,7 @@ function TMDB({list, secret}) {
   }
 
   return (
-    <div className="mt-5 w-full grid grid-cols-12 min-h-40 gap-3">
+    <div className={`mt-5 w-full grid grid-cols-12 min-h-40 gap-3 ${className}`}>
       {content}
     </div>
   );

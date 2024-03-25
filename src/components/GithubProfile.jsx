@@ -1,7 +1,7 @@
 import { profile } from "@/api/github";
 import { useEffect, useState } from "react";
 
-function GithubProfile({username}) {
+function GithubProfile({ username, className }) {
   const [data, setData] = useState(null);
   const [state, setState] = useState(0);
 
@@ -48,7 +48,11 @@ function GithubProfile({username}) {
     content = <p>{data}</p>;
   }
 
-  return <div className="grid grid-cols-12 md:gap-5">{content}</div>;
+  return (
+    <div className={`grid grid-cols-12 md:gap-5 ${className || ""}`}>
+      {content}
+    </div>
+  );
 }
 
 export default GithubProfile;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import leetcode from "@/api/leetcode";
 
-function LeetCode({username}) {
+function LeetCode({ username, className }) {
   const [data, setData] = useState(null);
   const [state, setState] = useState(0); // 0: loading, 1: success, 2: failed
 
@@ -20,7 +20,12 @@ function LeetCode({username}) {
   let content = <span className="loading loading-spinner text-neutral"></span>;
 
   if (state === 1) {
-    const progressColor = ["progress-info","progress-success", "progress-warning","progress-error"];
+    const progressColor = [
+      "progress-info",
+      "progress-success",
+      "progress-warning",
+      "progress-error",
+    ];
     content = (
       <>
         <p>Name: {username}</p>
@@ -46,7 +51,7 @@ function LeetCode({username}) {
     content = <p>{data}</p>;
   }
 
-  return <div>{content}</div>;
+  return <div className={`${className || ""}`}>{content}</div>;
 }
 
 export default LeetCode;

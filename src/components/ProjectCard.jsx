@@ -1,7 +1,7 @@
-function ProjectCard({ name, link, role, description, techniques, style }) {
+function ProjectCard({ name, link, role, description, techniques, className }) {
   return (
     <div
-      className={`rounded-xl bg-base-100 hover:bg-base-200 border border-slate-300 flex flex-col justify-between p-5 ${style}`}
+      className={`rounded-xl bg-base-100 hover:bg-base-200 border border-slate-300 flex flex-col justify-between p-5 ${className || ""}`}
     >
       <div>
         <a href={link} target="_blank" className="text-2xl font-medium">
