@@ -10,7 +10,7 @@ function Portfolio() {
   return (
     <>
       <Title text="I'm" highlight={config.portfolio.name} />
-      <section className="mt-10 grid grid-cols-12">
+      <section className="my-5 grid grid-cols-12">
         <div className="col-span-12 lg:col-span-7 flex flex-col justify-around">
           <GithubProfile username={username} />
         </div>

@@ -2,14 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: rgb(245, 245, 250);
-}
-
 #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 ::-webkit-scrollbar {

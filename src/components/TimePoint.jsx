@@ -13,10 +13,10 @@ function TimePoint({ time, role, sections, className }) {
         </svg>
       </div>
       <div>
-        <p className="text-xl text-gray-600">{time}</p>
-        <p className="mt-2 text-gray-600">As a {role}</p>
+        <p className="text-xl text-base-content">{time}</p>
+        <p className="mt-2 text-base-content">As a {role}</p>
         {sections.map((item, index) => (
-          <p key={index} className="mt-2 text-gray-600">
+          <p key={index} className="mt-2 text-base-content">
             <span className="font-bold">{item.section}: </span>{item.detail}
           </p>
         ))}

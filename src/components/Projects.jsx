@@ -45,7 +45,7 @@ function Projects({ username, className }) {
       <input
         type="text"
         placeholder="Project Name Search"
-        className="block input m-auto w-full max-w-xs"
+        className="block input input-bordered m-auto w-full max-w-xs"
         onChange={(e) => setKeyWord(e.target.value)}
       />
       <div className="grid grid-cols-12 px-6 lg:px-3 gap-4 md:gap-2 lg:gap-3">
