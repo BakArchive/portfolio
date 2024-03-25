@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import tmdb from "@/api/tmdb";
 
-function Animes() {
-  const list = "8294767";
+function TMDB({list, secret}) {
   const [data, setData] = useState(null);
   const [state, setState] = useState(0); // 0: loading, 1: success, 2: failed
 
   useEffect(() => {
-    tmdb(list)
+    tmdb(list, secret)
       .then((data) => {
         setState(1);
         setData(data);
@@ -48,4 +47,4 @@ function Animes() {
   );
 }
 
-export default Animes;
+export default TMDB;

@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import leetcode from "@/api/leetcode";
 
-function LeetCode() {
-  const username = "muenyu";
+function LeetCode({username}) {
   const [data, setData] = useState(null);
   const [state, setState] = useState(0); // 0: loading, 1: success, 2: failed
 

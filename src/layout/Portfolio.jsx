@@ -1,15 +1,16 @@
 import ColorFont from "@/components/ColorFont";
 import GithubProfile from "@/components/GithubProfile";
 import Projects from "@/components/Projects";
+import config from "@/config"
 
 function Portfolio() {
-  const username = "muenyu";
+  const username = config.portfolio.github;
 
   const titleClass = "mt-10 font-medium text-4xl md:text-6xl lg:text-7xl";
   return (
     <>
       <h1 className={titleClass}>
-        I'm <ColorFont text="productive" />
+        I'm <ColorFont text={config.portfolio.name}/>
       </h1>
       <section className="mt-10 grid grid-cols-12">
         <div className="col-span-12 lg:col-span-7 flex flex-col justify-around">
@@ -25,7 +26,7 @@ function Portfolio() {
 
       <section>
         <h2 className="my-5 font-medium text-2xl md:text-2xl lg:text-4xl">
-          Here are all Open Source Project I Involved
+          {config.portfolio.subTitle}
         </h2>
         <Projects username={username} />
       </section>

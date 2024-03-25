@@ -17,7 +17,7 @@ function Projects({ username }) {
         setState(-1);
         setData(e.message);
       });
-  }, [state,keyword]);
+  }, [state]);
 
   let content = <span className="loading loading-spinner text-neutral"></span>;
 
