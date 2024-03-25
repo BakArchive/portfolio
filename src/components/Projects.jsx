@@ -1,4 +1,4 @@
-import ProjectCard from "/src/components/ProjectCard.jsx";
+import Card from "/src/components/Card.jsx";
 import { useEffect, useState } from "react";
 import { projects } from "@/api/github";
 
@@ -23,15 +23,16 @@ function Projects({ username, className }) {
 
   if (state === 1) {
     content = data.repos
-      .filter((proj) => proj.name.toLowerCase().includes(keyword))
+      .filter((proj) => proj.name.toLowerCase().includes(keyword.toLowerCase()))
       .map((proj, index) => (
-        <ProjectCard
+        
+        <Card
           key={index}
-          name={proj.name}
+          title={proj.name}
           link={proj.link}
-          role={proj.role}
-          description={proj.description}
-          techniques={proj.techniques}
+          subTitle={proj.role}
+          content={proj.description}
+          tags={proj.techniques}
           className="col-span-12 md:col-span-6 lg:col-span-4"
         />
       ));

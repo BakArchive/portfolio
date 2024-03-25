@@ -159,16 +159,16 @@ const config = {
       {
         name: "AWS Certified Solutions Architect – Associate",
         link: "https://www.credly.com/badges/8d20efe6-9220-42b6-beaa-79fc33e8f526",
-        detail: "Pass, Expires on February 23, 2027",
+        detail: "Expires on February 23, 2027",
       },
       {
         name: "AWS Certified Developer – Associate",
         link: "https://www.credly.com/badges/a6a64eed-74fe-412b-b691-0c9683f1ca97",
-        detail: "Pass, Expires on February 12, 2027",
+        detail: "Expires on February 12, 2027",
       },
       {
         name: "PTE Academic English Test",
-        detail: "Overall: 66 Listening:62 Speaking:81 Reading:68 Writing:64",
+        detail: "Overall: 66",
       },
     ],
   },
