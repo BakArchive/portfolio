@@ -11,10 +11,10 @@ function Portfolio() {
     <>
       <Title text="I'm" highlight={config.portfolio.name} />
       <section className="my-5 grid grid-cols-12">
-        <div className="col-span-12 lg:col-span-7 flex flex-col justify-around">
+        <div className="col-span-12 lg:col-span-7 flex flex-col justify-around mt-5 lg:mt-0">
           <GithubProfile username={username} />
         </div>
-        <div className="col-span-12 lg:col-span-5 mt-10 lg:mt-0">
+        <div className="col-span-12 lg:col-span-5">
           <img
             className="m-auto w-5/6 md:w-full"
             src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&bg_color=00000000&hide_border=true`}

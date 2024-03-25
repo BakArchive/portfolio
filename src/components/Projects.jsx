@@ -22,10 +22,13 @@ function Projects({ username, className }) {
   let content = <span className="loading loading-spinner text-neutral"></span>;
 
   if (state === 1) {
-    content = data.repos
-      .filter((proj) => proj.name.toLowerCase().includes(keyword.toLowerCase()))
-      .map((proj, index) => (
-        
+    const filterRepos = data.repos.filter((proj) =>
+      proj.name.toLowerCase().includes(keyword.toLowerCase())
+    );
+    if (filterRepos.length === 0) {
+      content = <p className="col-span-full text-center">No project matching your keyword, please try something else.</p>
+    } else {
+      content = filterRepos.map((proj, index) => (
         <Card
           key={index}
           title={proj.name}
@@ -36,8 +39,9 @@ function Projects({ username, className }) {
           className="col-span-12 md:col-span-6 lg:col-span-4"
         />
       ));
+    }
   } else if (state === -1) {
-    content = <p>{data}</p>;
+    content = <p className="col-span-full text-center">{data}</p>;
   }
 
   return (
