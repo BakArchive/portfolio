@@ -1,28 +1,16 @@
 const config = {
   home: {
-    name: "Muen Yu",
+    highlight: "Muen Yu",
     subTitle: "Nice to meet you!",
-    social: [
-      {
-        icon: "ti-archive",
-        link: "https://mashiro.best",
-      },
-      {
-        icon: "ti-brand-linkedin",
-        link: "https://www.linkedin.com/in/muen-yu-802b29228/",
-      },
-      {
-        icon: "ti-brand-github",
-        link: "https://github.com/MuenYu",
-      },
-      {
-        icon: "ti-brand-leetcode",
-        link: "https://leetcode.com/muenyu/",
-      },
-    ],
+    social: {
+      blog: "https://mashiro.best",
+      linkedin: "https://www.linkedin.com/in/muen-yu-802b29228/",
+      github: "https://github.com/MuenYu",
+      leetcode: "https://leetcode.com/muenyu/",
+    },
   },
   about: {
-    name: "multifaceted",
+    highlight: "multifaceted",
     sections: [
       {
         title: "Blogger",
@@ -54,7 +42,7 @@ const config = {
     ],
   },
   resume: {
-    name: "professional",
+    highlight: "professional",
     intro:
       "I am a person with a strong curiosity, and it propels me towards the field of technology. I can feel my passion and eagerness for new knowledge and open source. I believe that learning by doing is the best strategy for me, and I have gained a lot of practical skills through this approach. In the future, I want to become a full-stack developer who knows every detail in software development process.",
     skills: [
@@ -173,7 +161,7 @@ const config = {
     ],
   },
   portfolio: {
-    name: "productive",
+    highlight: "productive",
     subTitle: "All Open Source Project I Involved",
     github: "muenyu",
   },

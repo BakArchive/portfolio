@@ -8,7 +8,7 @@ import config from "@/config";
 function About() {
   return (
     <>
-      <Title text="I'm" highlight={config.about.name} />
+      <Title text="I'm" highlight={config.about.highlight} />
       {config.about.sections.map((section, index) => (
         <section className="my-5" key={index}>
           <SectionTitle text={section.title} />
