@@ -15,7 +15,7 @@ function App() {
       <footer className="py-4">
         <CopyRight />
       </footer>
-      <ThemeSwitch className=" fixed bottom-10 right-10" />
+      <ThemeSwitch className="fixed bottom-10 right-10" />
     </>
   );
 }
