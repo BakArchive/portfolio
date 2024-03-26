@@ -9,7 +9,7 @@ import config from "@/config";
 function Resume() {
   return (
     <>
-      <Title text="I'm" highlight={config.resume.highlight} />
+      <Title text={config.resume.title} highlight={config.resume.highlight} />
       <section className="my-5 grid grid-cols-12 gap-5">
         <Content
           text={config.resume.intro}

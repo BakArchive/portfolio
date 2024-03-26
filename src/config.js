@@ -1,5 +1,6 @@
 const config = {
   home: {
+    title: "I'm",
     highlight: "Muen Yu",
     subTitle: "Nice to meet you!",
     social: {
@@ -10,6 +11,7 @@ const config = {
     },
   },
   about: {
+    title: "I'm",
     highlight: "multifaceted",
     sections: [
       {
@@ -42,6 +44,7 @@ const config = {
     ],
   },
   resume: {
+    title: "I'm",
     highlight: "professional",
     intro:
       "I am a person with a strong curiosity, and it propels me towards the field of technology. I can feel my passion and eagerness for new knowledge and open source. I believe that learning by doing is the best strategy for me, and I have gained a lot of practical skills through this approach. In the future, I want to become a full-stack developer who knows every detail in software development process.",
@@ -161,6 +164,7 @@ const config = {
     ],
   },
   portfolio: {
+    title: "I'm",
     highlight: "productive",
     subTitle: "All Open Source Project I Involved",
     github: "muenyu",
