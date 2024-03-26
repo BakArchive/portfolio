@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import leetcode from "@/api/leetcode";
 import Loading from "@/components/Loading";
+import APIError from "@/components/APIError";
 
 /**
  * a component to show leetcode user profile
@@ -55,7 +56,7 @@ function LeetCode({ username, className }) {
       </>
     );
   } else if (state === -1) {
-    content = <p>{data}</p>;
+    content = <APIError errMsg={data} />;
   }
 
   return <div className={`${className || ""}`}>{content}</div>;

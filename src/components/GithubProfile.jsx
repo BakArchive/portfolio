@@ -1,5 +1,6 @@
 import { profile } from "@/api/github";
 import { useEffect, useState } from "react";
+import APIError from "@/components/APIError";
 
 /**
  * component to show github profile, including avatar, username, 
@@ -51,7 +52,7 @@ function GithubProfile({ username, className }) {
       </>
     );
   } else if (state === -1) {
-    content = <p>{data}</p>;
+    content = <APIError errMsg={data} />;
   }
 
   return (

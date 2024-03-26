@@ -1,12 +1,11 @@
 // constants:
 const expiration = 24 * 60 * 60 * 1000; // the default cache expiration is 24 h
 
-
 /**
  * check if the data in localstorage and validation
- * @param {string} key the key for localstorage 
+ * @param {string} key the key for localstorage
  * @param {integer} expiration expiration period, millisecond
- * @returns 
+ * @returns
  */
 function lsFetch(key, expiration) {
   const data = localStorage.getItem(key);
@@ -22,7 +21,7 @@ function lsFetch(key, expiration) {
  * add timestamp to data and store in localstorage
  * @param {string} key the key for localstorage
  * @param {object} data the data object you need to store
- * @returns 
+ * @returns
  */
 function lsStore(key, data) {
   const now = Date.now();
@@ -39,18 +38,18 @@ function lsStore(key, data) {
  * @param {object} options fetch options
  * @param {string} key the key for localstorage
  * @param {function} trimCallback how to trim the data from API
- * @returns 
+ * @returns
  */
 async function generalJsonFetch(url, options, key, trimCallback) {
-    // load from localstorage first
-    let data = lsFetch(key,expiration);
-    if (data) return data;
+  // load from localstorage first
+  let data = lsFetch(key, expiration);
+  if (data) return data;
 
-    // fetch from API
-    const resp = await fetch(url, options);
-    if (!resp.ok) throw new Error(`API error: ${resp.status}`);
-    data = await resp.json();
-    return lsStore(key, trimCallback(data));
+  // fetch from API
+  const resp = await fetch(url, options);
+  if (!resp.ok) throw new Error(`API error: ${resp.statusText || resp.status}`);
+  data = await resp.json();
+  return lsStore(key, trimCallback(data));
 }
 
 export default generalJsonFetch;

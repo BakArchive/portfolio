@@ -2,6 +2,7 @@ import Card from "/src/components/Card.jsx";
 import Loading from "/src/components/Loading.jsx";
 import { useEffect, useState } from "react";
 import { projects } from "@/api/github";
+import APIError from "@/components/APIError";
 
 /**
  * component showing github repos, supporting keyword search
@@ -47,7 +48,7 @@ function Projects({ username, className }) {
       ));
     }
   } else if (state === -1) {
-    content = <p className="col-span-full text-center">{data}</p>;
+    content = <APIError errMsg={data} className="col-span-full" />;
   }
 
   return (

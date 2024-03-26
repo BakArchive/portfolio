@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import tmdb from "@/api/tmdb";
 import Card from "@/components/Card";
 import Loading from "@/components/Loading";
+import APIError from "@/components/APIError";
 
 /**
  * show a list of anime/tv drama/movie from tmdb in card style
@@ -38,7 +39,7 @@ function TMDB({ list, className }) {
       );
     });
   } else if (state === -1) {
-    content = <p>{data}</p>;
+    content = <APIError errMsg={data} className="col-span-full" />
   }
 
   return (
