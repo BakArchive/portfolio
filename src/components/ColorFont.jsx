@@ -1,3 +1,8 @@
+/**
+ * the gradient font
+ * @param {*} param0 
+ * @returns 
+ */
 function ColorFont({ text, className }) {
   return (
     <span

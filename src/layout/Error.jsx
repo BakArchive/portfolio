@@ -1,6 +1,11 @@
 import { useRouteError } from "react-router-dom";
 import ThemeSwitch from "@/components/ThemeSwitch.jsx";
 
+/**
+ * The global Error page, print error message on the center
+ * including 404 handling
+ * @returns 
+ */
 function Error() {
   const error = useRouteError();
   return (

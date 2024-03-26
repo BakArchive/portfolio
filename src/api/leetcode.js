@@ -3,9 +3,13 @@ import generalJsonFetch from "./common.js";
 const api = "https://leetcodestats.cyclic.app";
 const key = "leetcode";
 
+/**
+ * fetch leetcode user profile
+ * @param {string} username leetcode username
+ * @returns promose of leetcode user profile
+ */
 const leetcode = async (username) => {
   const url = `${api}/${username}`;
-  // store in localstorage
   return generalJsonFetch(url,{},key,trim);
 };
 

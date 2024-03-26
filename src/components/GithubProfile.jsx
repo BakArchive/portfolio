@@ -1,6 +1,12 @@
 import { profile } from "@/api/github";
 import { useEffect, useState } from "react";
 
+/**
+ * component to show github profile, including avatar, username, 
+ * number of public repos, follower/following, github join time
+ * @param {*} param0 
+ * @returns 
+ */
 function GithubProfile({ username, className }) {
   const [data, setData] = useState(null);
   const [state, setState] = useState(0);

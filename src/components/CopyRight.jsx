@@ -1,3 +1,8 @@
+/**
+ * the component showing copyright info
+ * @param {*} param0 
+ * @returns 
+ */
 function CopyRight({ className }) {
   const time = new Date().getFullYear();
   return (

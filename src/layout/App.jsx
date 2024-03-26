@@ -3,6 +3,11 @@ import ThemeSwitch from "@/components/ThemeSwitch.jsx";
 import CopyRight from "@/components/CopyRight.jsx";
 import { Outlet } from "react-router-dom";
 
+/**
+ * The global App object, sandwich layout (header, main, footer)
+ * the main part changes as the active link in nav
+ * @returns
+ */
 function App() {
   return (
     <>

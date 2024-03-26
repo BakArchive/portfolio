@@ -1,6 +1,13 @@
+import Tags from "@/components/Tags"
+
+/**
+ * The common Card component, according parameter to change style
+ * @param {*} param0 
+ * @returns 
+ */
 function Card({ title, subTitle, content, img, link, tags, className }) {
   return (
-    <div className={`card bg-base-100 hover:bg-base-200 shadow-xl ${className}`}>
+    <div className={`card bg-base-100 hover:bg-base-200 shadow-xl ${className || ""}`}>
       {img && (
         <figure>
           <img className="object-cover" src={img} alt="poster" />
@@ -13,16 +20,7 @@ function Card({ title, subTitle, content, img, link, tags, className }) {
         {subTitle && <p>{subTitle}</p>}
         {content && <p>{content}</p>}
         {tags && (
-          <div className="mt-2 flex flex-wrap justify-center gap-3">
-            {tags.map((tag, index) => (
-              <span
-                key={index}
-                className="text-xs btn btn-xs bg-base-100"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
+          <Tags list={tags} className="mt-2" tagClassName="btn-xs text-xs" />
         )}
       </div>
     </div>

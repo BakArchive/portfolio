@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 
+/**
+ * a button component to change current theme, and store theme state in localstorage
+ * @param {*} param0 
+ * @returns 
+ */
 function ThemeSwitch({ className }) {
   const [isdark, setIsdark] = useState(
-    JSON.parse(localStorage.getItem("isdark")??false)
+    JSON.parse(localStorage.getItem("isdark")??false) // load from localstorage, false if not exist
   );
   useEffect(() => {
     localStorage.setItem("isdark", JSON.stringify(isdark));

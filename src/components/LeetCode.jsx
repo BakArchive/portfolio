@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import leetcode from "@/api/leetcode";
+import Loading from "@/components/Loading";
 
+/**
+ * a component to show leetcode user profile
+ * including name, ranking, solved/total questions by difficulties
+ * @param {*} param0 
+ * @returns 
+ */
 function LeetCode({ username, className }) {
   const [data, setData] = useState(null);
   const [state, setState] = useState(0); // 0: loading, 1: success, 2: failed
@@ -17,7 +24,7 @@ function LeetCode({ username, className }) {
       });
   }, [state]);
 
-  let content = <span className="loading loading-spinner text-neutral"></span>;
+  let content = <Loading />
 
   if (state === 1) {
     const progressColor = [

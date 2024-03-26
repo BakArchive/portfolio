@@ -5,6 +5,11 @@ import {
   IconBrandGithub,
 } from "@tabler/icons-react";
 
+/**
+ * the common social link component, according to the social object to match icon
+ * @param {*} param0 
+ * @returns 
+ */
 function Social({ social, className }) {
   const iconMap = {
     linkedin: <IconBrandLinkedin />,
@@ -14,7 +19,7 @@ function Social({ social, className }) {
   };
 
   return (
-    <div className={`flex flex-wrap gap-5 ${className}`}>
+    <div className={`flex flex-wrap gap-5 ${className || ""}`}>
       {Object.keys(social).map((key, index) => (
         <a href={social[key]} target="_blank" key={index} className="p-1 rounded-full hover:bg-base-300">
           {iconMap[key]}

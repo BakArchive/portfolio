@@ -1,7 +1,13 @@
 import Card from "/src/components/Card.jsx";
+import Loading from "/src/components/Loading.jsx";
 import { useEffect, useState } from "react";
 import { projects } from "@/api/github";
 
+/**
+ * component showing github repos, supporting keyword search
+ * @param {*} param0 
+ * @returns 
+ */
 function Projects({ username, className }) {
   const [data, setData] = useState(null);
   const [state, setState] = useState(0); // 0: loading, 1: success, 2: failed
@@ -19,7 +25,7 @@ function Projects({ username, className }) {
       });
   }, [state]);
 
-  let content = <span className="loading loading-spinner text-neutral"></span>;
+  let content = <Loading className="col-span-full" />;
 
   if (state === 1) {
     const filterRepos = data.repos.filter((proj) =>

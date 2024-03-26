@@ -1,3 +1,8 @@
+/**
+ * standard subtitle component
+ * @param {*} param0 
+ * @returns 
+ */
 function SubTitle({ text, className }) {
   return (
     <h2 className={`font-medium text-3xl md:text-5xl ${className || ""}`}>

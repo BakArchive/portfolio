@@ -1,3 +1,8 @@
+/**
+ * the standard section title for all pages
+ * @param {*} param0 
+ * @returns 
+ */
 function SectionTitle({ text, className }) {
   return (
     <h2

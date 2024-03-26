@@ -5,11 +5,17 @@ import LeetCode from "@/components/LeetCode";
 import TMDB from "@/components/TMDB";
 import config from "@/config";
 
+/**
+ * The about page of the site, data from config file
+ * @returns 
+ */
 function About() {
+  const conf = config.about;
+
   return (
     <>
-      <Title text={config.about.title} highlight={config.about.highlight} />
-      {config.about.sections.map((section, index) => (
+      <Title text={conf.title} highlight={conf.highlight} />
+      {conf.sections.map((section, index) => (
         <section className="my-5" key={index}>
           <SectionTitle text={section.title} />
           {section.type === 0 && (

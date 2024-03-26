@@ -1,5 +1,10 @@
 import ColorFont from "@/components/ColorFont";
 
+/**
+ * the standard title component for the whole site
+ * @param {*} param0 
+ * @returns 
+ */
 function Title({ text, highlight, className }) {
   return (
     <h1

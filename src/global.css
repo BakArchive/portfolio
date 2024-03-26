@@ -10,6 +10,7 @@
   margin: 0 auto;
 }
 
+/* beauty scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

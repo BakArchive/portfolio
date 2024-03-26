@@ -1,6 +1,11 @@
 import RouteRule from "@/router";
 import { NavLink } from "react-router-dom";
 
+/**
+ * The nav bar component, loading nav items from router object
+ * @param {*} param0 
+ * @returns 
+ */
 function Nav({className}) {
   const navItemClass = "text-slate-500 rounded-full px-3 py-1";
   const active = "bg-base-200";

@@ -1,6 +1,11 @@
 import TimePoint from "/src/components/TimePoint.jsx";
 
-function Experience({ data, className }) {
+/**
+ * A timeline component
+ * @param {*} param0 
+ * @returns 
+ */
+function TimeLine({ data, className }) {
   return (
     <div className={`flex ${className || ""}`}>
       <ul>
@@ -17,4 +22,4 @@ function Experience({ data, className }) {
   );
 }
 
-export default Experience;
+export default TimeLine;

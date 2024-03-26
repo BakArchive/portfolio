@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import tmdb from "@/api/tmdb";
 import Card from "@/components/Card";
+import Loading from "@/components/Loading";
 
+/**
+ * show a list of anime/tv drama/movie from tmdb in card style
+ * @param {*} param0 
+ * @returns 
+ */
 function TMDB({ list, secret, className }) {
   const [data, setData] = useState(null);
   const [state, setState] = useState(0); // 0: loading, 1: success, 2: failed
@@ -18,7 +24,7 @@ function TMDB({ list, secret, className }) {
       });
   }, [state]);
 
-  let content = <span className="loading loading-spinner text-neutral"></span>;
+  let content = <Loading className="col-span-full" />
   if (state === 1) {
     content = data.items.map((item, index) => {
       return (
@@ -37,7 +43,7 @@ function TMDB({ list, secret, className }) {
 
   return (
     <div
-      className={`mt-5 w-full grid grid-cols-12 min-h-40 gap-3 ${className}`}
+      className={`mt-5 w-full grid grid-cols-12 min-h-40 gap-3 ${className||""}`}
     >
       {content}
     </div>

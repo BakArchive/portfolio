@@ -2,6 +2,11 @@ import generalJsonFetch from "./common.js";
 
 const api = "https://api.github.com";
 
+/**
+ * get github profile from github rest api
+ * @param {string} username github username
+ * @returns promise of github user profile
+ */
 const profile = async (username) => {
   const url = `${api}/users/${username}`;
   const key = "github-profile";
@@ -21,6 +26,11 @@ const profile = async (username) => {
   return generalJsonFetch(url, {}, key, trim);
 };
 
+/**
+ * get public repo list of github user
+ * @param {string} username github username
+ * @returns promise of public repo list
+ */
 const projects = async (username) => {
   const url = `${api}/users/${username}/repos`;
   const key = "github-repos";

@@ -1,6 +1,11 @@
+/**
+ * The component used in timeline, as a timepoint in the timeline
+ * @param {*} param0 
+ * @returns 
+ */
 function TimePoint({ time, role, sections, className }) {
   return (
-    <li className={`relative flex items-baseline gap-6 pb-5 ${className}`}>
+    <li className={`relative flex items-baseline gap-6 pb-5 ${className||""}`}>
       <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-gray-400">
         <svg
           xmlns="http://www.w3.org/2000/svg"
