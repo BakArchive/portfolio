@@ -35,7 +35,7 @@ function About() {
           {section.type === 2 && (
             <>
               <Content text={section.content} className="text-center p-5" />
-              <TMDB list={section.list} secret={section.secret} />
+              <TMDB list={section.list} />
             </>
           )}
         </section>

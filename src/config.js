@@ -39,7 +39,6 @@ const config = {
         content:
           "I appreciate the artistry and storytelling found in Japanese anime.",
         list: "8294767",
-        secret: "76fa1b7c84b910b5a84ef561429dd0dc",
       },
     ],
   },

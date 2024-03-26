@@ -8,12 +8,12 @@ import Loading from "@/components/Loading";
  * @param {*} param0 
  * @returns 
  */
-function TMDB({ list, secret, className }) {
+function TMDB({ list, className }) {
   const [data, setData] = useState(null);
   const [state, setState] = useState(0); // 0: loading, 1: success, 2: failed
 
   useEffect(() => {
-    tmdb(list, secret)
+    tmdb(list)
       .then((data) => {
         setState(1);
         setData(data);
