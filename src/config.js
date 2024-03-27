@@ -1,4 +1,5 @@
 const config = {
+  sitename: "My Portfolio",
   home: {
     title: "I'm",
     highlight: "Muen Yu",
