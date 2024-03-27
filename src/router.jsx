@@ -1,5 +1,4 @@
 import App from "@/layout/App";
-import Error from "@/layout/Error";
 import Home from "@/layout/Home";
 import About from "@/layout/About";
 import Resume from "@/layout/Resume";
@@ -9,7 +8,7 @@ import Portfolio from "@/layout/Portfolio";
 const RouteRule = {
   path: "/",
   element: <App />, // main frame
-  errorElement: <Error />, // error frame
+  errorElement: <App />, // error frame
   children: [
     {
       title: "Home",

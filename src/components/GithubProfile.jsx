@@ -1,6 +1,6 @@
 import { profile } from "@/api/github";
 import { useEffect, useState } from "react";
-import APIError from "@/components/APIError";
+import ErrUI from "@/components/ErrUI";
 
 /**
  * component to show github profile, including avatar, username, 
@@ -22,7 +22,7 @@ function GithubProfile({ username, className }) {
         setState(-1);
         setData(e.message);
       });
-  }, [state]);
+  }, [username]);
 
   let content = <span className="loading loading-spinner text-neutral"></span>;
   if (state === 1) {
@@ -52,7 +52,7 @@ function GithubProfile({ username, className }) {
       </>
     );
   } else if (state === -1) {
-    content = <APIError errMsg={data} />;
+    content = <ErrUI err={data} />;
   }
 
   return (

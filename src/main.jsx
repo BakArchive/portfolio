@@ -6,6 +6,8 @@ import "@/global.css"
 
 const router = createBrowserRouter([RouteRule]); // create router from route objects
 
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />

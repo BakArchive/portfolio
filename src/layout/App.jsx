@@ -1,7 +1,9 @@
 import Nav from "@/components/Nav.jsx";
 import ThemeSwitch from "@/components/ThemeSwitch.jsx";
 import CopyRight from "@/components/CopyRight.jsx";
+import ErrUI from "@/components/ErrUI.jsx";
 import { Outlet } from "react-router-dom";
+import { useRouteError } from "react-router-dom";
 
 /**
  * The global App object, sandwich layout (header, main, footer)
@@ -9,13 +11,16 @@ import { Outlet } from "react-router-dom";
  * @returns
  */
 function App() {
+  const err = useRouteError();
+
   return (
     <>
       <header className="py-8 w-full flex justify-center">
         <Nav className="w-full md:w-4/5 lg:w-1/3" />
       </header>
       <main className="px-5 w-full md:w-4/5 m-auto flex flex-col">
-        <Outlet />
+        {err === null && <Outlet />}
+        {err !== null && <ErrUI err={err.status} className="text-3xl md:text-5xl" />}
       </main>
       <footer className="py-4">
         <CopyRight />

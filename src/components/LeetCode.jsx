@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import leetcode from "@/api/leetcode";
 import Loading from "@/components/Loading";
-import APIError from "@/components/APIError";
+import ErrUI from "@/components/ErrUI";
 
 /**
  * a component to show leetcode user profile
@@ -23,7 +23,7 @@ function LeetCode({ username, className }) {
         setState(-1);
         setData(e.message);
       });
-  }, [state]);
+  }, [username]);
 
   let content = <Loading />
 
@@ -56,7 +56,7 @@ function LeetCode({ username, className }) {
       </>
     );
   } else if (state === -1) {
-    content = <APIError errMsg={data} />;
+    content = <ErrUI err={data} />;
   }
 
   return <div className={`${className || ""}`}>{content}</div>;

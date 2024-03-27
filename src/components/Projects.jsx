@@ -2,7 +2,7 @@ import Card from "/src/components/Card.jsx";
 import Loading from "/src/components/Loading.jsx";
 import { useEffect, useState } from "react";
 import { projects } from "@/api/github";
-import APIError from "@/components/APIError";
+import ErrUI from "@/components/ErrUI";
 
 /**
  * component showing github repos, supporting keyword search
@@ -24,7 +24,7 @@ function Projects({ username, className }) {
         setState(-1);
         setData(e.message);
       });
-  }, [state]);
+  }, [username]);
 
   let content = <Loading className="col-span-full" />;
 
@@ -48,7 +48,7 @@ function Projects({ username, className }) {
       ));
     }
   } else if (state === -1) {
-    content = <APIError errMsg={data} className="col-span-full" />;
+    content = <ErrUI err={data} className="col-span-full" />;
   }
 
   return (
