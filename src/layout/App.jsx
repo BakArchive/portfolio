@@ -4,7 +4,7 @@ import CopyRight from "@/components/CopyRight.jsx";
 import ErrUI from "@/components/ErrUI.jsx";
 import { Outlet } from "react-router-dom";
 import { useRouteError } from "react-router-dom";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import config from "@/config";
 
 /**
@@ -35,10 +35,10 @@ function App() {
         <Nav className="w-full md:w-4/5 lg:w-1/3" />
       </header>
       <main className="px-5 w-full md:w-4/5 m-auto flex flex-col">
-        {err === null && <Outlet />}
-        {err !== null && (
-          <ErrUI err={err.status} className="text-3xl md:text-5xl" />
-        )}
+          {err === null && <Suspense><Outlet /></Suspense>}
+          {err !== null && (
+            <ErrUI err={err.status} className="text-3xl md:text-5xl" />
+          )}
       </main>
       <footer className="py-4">
         <CopyRight />

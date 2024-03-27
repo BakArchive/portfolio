@@ -1,8 +1,11 @@
 import App from "@/layout/App";
-import Home from "@/layout/Home";
-import About from "@/layout/About";
-import Resume from "@/layout/Resume";
-import Portfolio from "@/layout/Portfolio";
+
+import { lazy } from "react";
+
+const Home = lazy(() => import('@/layout/Home'))
+const About = lazy(() => import("@/layout/About"));
+const Resume = lazy(() => import("@/layout/Resume"));
+const Portfolio = lazy(() => import("@/layout/Portfolio"));
 
 // router configuration
 const RouteRule = {
