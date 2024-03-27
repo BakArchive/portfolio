@@ -6,12 +6,12 @@ import { useEffect, useState } from "react";
  * @returns 
  */
 function ThemeSwitch({ className }) {
-  const [isdark, setIsdark] = useState(
-    JSON.parse(localStorage.getItem("isdark")??false) // load from localstorage, false if not exist
+  const [theme, setTheme] = useState(
+    JSON.parse(localStorage.getItem("theme")??false) // false: light, true: dark
   );
   useEffect(() => {
-    localStorage.setItem("isdark", JSON.stringify(isdark));
-  }, [isdark]);
+    localStorage.setItem("theme", JSON.stringify(theme));
+  }, [theme]);
 
   return (
     <label className={`btn btn-square swap swap-rotate ${className || ""}`}>
@@ -19,8 +19,8 @@ function ThemeSwitch({ className }) {
         type="checkbox"
         className="theme-controller"
         value="dark"
-        checked={isdark}
-        onChange={() => setIsdark(!isdark)}
+        checked={theme}
+        onChange={() => setTheme(!theme)}
       />
       <svg
         className="swap-off fill-current w-6 h-6"

@@ -55,7 +55,7 @@ function Projects({ username, className }) {
     <div className={`flex flex-col gap-5 ${className || ""}`}>
       <input
         type="text"
-        placeholder="Project Name Search"
+        placeholder="Enter Project Name"
         className="block input input-bordered m-auto w-full max-w-xs"
         onChange={(e) => setKeyWord(e.target.value)}
       />
