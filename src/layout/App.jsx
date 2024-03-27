@@ -6,6 +6,8 @@ import { Outlet } from "react-router-dom";
 import { useRouteError } from "react-router-dom";
 import { Suspense, useEffect } from "react";
 import config from "@/config";
+import "@/global.css";
+import "animate.css"
 
 /**
  * The global App object, sandwich layout (header, main, footer)
@@ -31,7 +33,7 @@ function App() {
 
   return (
     <>
-      <header className="py-8 w-full flex justify-center">
+      <header className="py-8 w-full flex justify-center animate__animated animate__fadeInDown">
         <Nav className="w-full md:w-4/5 lg:w-1/3" />
       </header>
       <main className="px-5 w-full md:w-4/5 m-auto flex flex-col">
@@ -40,7 +42,7 @@ function App() {
             <ErrUI err={err.status} className="text-3xl md:text-5xl" />
           )}
       </main>
-      <footer className="py-4">
+      <footer className="py-4  animate__animated animate__fadeInUp">
         <CopyRight />
       </footer>
       <ThemeSwitch className="fixed bottom-10 right-10" />

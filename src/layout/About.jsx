@@ -13,7 +13,7 @@ function About() {
   const conf = config.about;
 
   return (
-    <>
+    <div className="animate__animated animate__fadeIn">
       <Title text={conf.title} highlight={conf.highlight} />
       {conf.sections.map((section, index) => (
         <section className="my-5" key={index}>
@@ -40,7 +40,7 @@ function About() {
           )}
         </section>
       ))}
-    </>
+    </div>
   );
 }
 

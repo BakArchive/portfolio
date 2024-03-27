@@ -12,7 +12,7 @@ function Portfolio() {
   const conf = config.portfolio;
 
   return (
-    <>
+    <div className="animate__animated animate__fadeIn">
       <Title text={conf.title} highlight={conf.highlight} />
       <section className="my-5">
         <SectionTitle text="My Commit Calendar" className="mb-5" />
@@ -23,7 +23,7 @@ function Portfolio() {
         <SectionTitle text={conf.subTitle} className="mb-5" />
         <Projects username={conf.github} />
       </section>
-    </>
+    </div>
   );
 }
 

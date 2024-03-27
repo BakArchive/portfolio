@@ -10,7 +10,7 @@ function Resume() {
   const conf = config.resume;
 
   return (
-    <>
+    <div className="animate__animated animate__fadeIn">
       <Title text={conf.title} highlight={conf.highlight} />
       <section className="my-5 grid grid-cols-12 gap-5">
         <Content
@@ -46,7 +46,7 @@ function Resume() {
         <SectionTitle text="My Experience" className="mb-5" />
         <TimeLine data={conf.experience} />
       </section>
-    </>
+    </div>
   );
 }
 

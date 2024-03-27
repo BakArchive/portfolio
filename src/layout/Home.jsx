@@ -10,7 +10,7 @@ import config from "@/config";
 function Home() {
   const conf = config.home;
   return (
-    <div className="flex flex-col md:flex-row gap-20 md:gap-0">
+    <div className="flex flex-col md:flex-row gap-20 md:gap-0 animate__animated animate__fadeIn">
       <div className="md:w-2/3 lg:w-1/2 flex flex-col justify-center gap-5">
         <Title text={conf.title} highlight={conf.highlight} />
         <SubTitle text={conf.subTitle} />
