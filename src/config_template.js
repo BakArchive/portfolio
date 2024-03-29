@@ -55,6 +55,35 @@ const config = {
     highlight: "Highlight Title",
     // a paragraph for self introduction
     intro: "self introduction content",
+    // radar chart
+    radar: [
+      {
+        // metric name
+        key: "Development",
+        // metric value
+        value: 10,
+      },
+      {
+        key: "Security",
+        value: 10,
+      },
+      {
+        key: "Algorithm",
+        value: 10,
+      },
+      {
+        key: "Operation",
+        value: 10,
+      },
+      {
+        key: "SoftSkill",
+        value: 10,
+      },
+      {
+        key: "Testing",
+        value: 10,
+      },
+    ],
     // your skill tags
     skills: ["Skill1", "Skill2", "Skill3", "Skill4", "Skill5"],
     // your working/education experience

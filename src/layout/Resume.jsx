@@ -4,6 +4,7 @@ import Card from "@/components/Card";
 import Content from "@/components/Content";
 import Tags from "@/components/Tags";
 import TimeLine from "@/components/TimeLine";
+import AbilityRadar from "@/components/AbilityRadar";
 import config from "@/config";
 
 function Resume() {
@@ -17,8 +18,8 @@ function Resume() {
           text={conf.intro}
           className="col-span-12 lg:col-span-8"
         />
-        <figure className="col-span-12 lg:col-span-4">
-          <img className="w-64 m-auto" src="/t-rex.svg" />
+        <figure className="col-span-12 lg:col-span-4 min-h-64">
+          <AbilityRadar data={conf.radar} />
         </figure>
       </section>
 
