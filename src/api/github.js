@@ -27,23 +27,6 @@ const profile = async (username) => {
 };
 
 /**
- * get github commit activity by username
- * 3rd-party api
- * @param {string} username github username
- * @returns 
- */
-const activities = async (username) => {
-  const url = `https://github-contributions-api.jogruber.de/v4/${username}?y=last`
-  const key = "github-activity";
-
-  function trim(origin) {
-    return {contributions:origin.contributions};
-  }
-
-  return generalJsonFetch(url, {}, key, trim);
-}
-
-/**
  * get public repo list of github user
  * @param {string} username github username
  * @returns promise of public repo list
@@ -71,4 +54,4 @@ const projects = async (username) => {
   return generalJsonFetch(url, {}, key, trim);
 };
 
-export { profile, projects, activities };
+export { profile, projects };

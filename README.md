@@ -27,7 +27,7 @@ Please refer to `/src/config_template.js` to adjust your `config.js`.
 | Core | [react](https://github.com/facebook/react) |
 | Frontend Router | [react-router](https://github.com/remix-run/react-router) |
 | UI and animation | [tailwindcss](https://github.com/tailwindlabs/tailwindcss), [daisyui](https://github.com/saadeghi/daisyui), [animationcss](https://github.com/animate-css/animate.css) |
-| 3rd-party component | [react-activity-calendar](https://github.com/grubersjoe/react-activity-calendar) |
+| 3rd-party component |  |
 | Building tool | [vite](https://github.com/vitejs/vite) |
 
 ### How to Run the project
