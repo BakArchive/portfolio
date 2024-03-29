@@ -25,5 +25,3 @@ dist-ssr
 
 # Secret
 .env
-# config
-config.js
