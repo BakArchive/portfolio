@@ -38,7 +38,7 @@ const config = {
         title: "Bilingual",
         type: 0, // 0 normal, 1 leetcode, 2 tmdb
         content:
-          "I can speak two languages: Mandarin and English. In my opinion, language is the bridge to connect people from another race/nation, so multilinguals can usually gain richer life experience from a larger world. I am committed to become a multilingual, Japanese will be my next goal after English.",
+          "I can speak two languages: Mandarin and English. In my opinion, language is the bridge to connect people from another race/nation, so multilinguals can usually gain richer life experience from a larger world. I am committed to become a multilingual, and Japanese will be my next goal after English.",
       },
       // {
       //   title: "Anime Fan",
