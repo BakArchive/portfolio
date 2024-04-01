@@ -2,10 +2,8 @@ import Nav from "@/components/Nav.jsx";
 import ThemeSwitch from "@/components/ThemeSwitch.jsx";
 import CopyRight from "@/components/CopyRight.jsx";
 import ErrUI from "@/components/ErrUI.jsx";
-import { Outlet } from "react-router-dom";
-import { useRouteError } from "react-router-dom";
-import { Suspense, useEffect } from "react";
-import config from "@/config";
+import { useRouteError, Outlet } from "react-router-dom";
+import { Suspense, useEffect, useRef } from "react";
 import "@/global.css";
 import "animate.css"
 
@@ -16,12 +14,12 @@ import "animate.css"
  */
 function App() {
   const err = useRouteError();
+  const titleRef = useRef(null);
 
   useEffect(() => {
-    document.title = config.sitename;
     const handlevisibilityChange = () => {
       if (document.visibilityState === "hidden") document.title = "Look at me, pls"
-      else document.title = config.sitename;
+      else document.title = titleRef.current;
     }
     window.addEventListener("visibilitychange", handlevisibilityChange);
 
@@ -34,7 +32,7 @@ function App() {
   return (
     <>
       <header className="py-8 w-full flex justify-center animate__animated animate__fadeInDown">
-        <Nav className="w-full md:w-4/5 lg:w-1/3" />
+        <Nav className="w-full md:w-4/5 lg:w-1/3" titleRef={titleRef} />
       </header>
       <main className="px-5 w-full md:w-4/5 m-auto flex flex-col">
           {err === null && <Suspense><Outlet /></Suspense>}
