@@ -5,7 +5,7 @@ import Tags from "@/components/Tags"
  * @param {*} param0 
  * @returns 
  */
-function Card({ title, subTitle, content, img, link, tags, className }) {
+function Card({ title, content, img, link, className }) {
   return (
     <div className={`card bg-base-100 hover:bg-base-200 shadow-xl ${className || ""}`}>
       {img && (
@@ -17,11 +17,7 @@ function Card({ title, subTitle, content, img, link, tags, className }) {
         <a href={link} className={`card-title ${link ? "hover:underline" : ""}`} target="_blank">
           {title}
         </a>
-        {subTitle && <p>{subTitle}</p>}
         {content && <p>{content}</p>}
-        {tags && (
-          <Tags list={tags} className="mt-2" tagClassName="btn-xs text-xs" />
-        )}
       </div>
     </div>
   );

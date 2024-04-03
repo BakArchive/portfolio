@@ -1,4 +1,4 @@
-import Card from "/src/components/Card.jsx";
+import ProjectCard from "/src/components/ProjectCard.jsx";
 import Loading from "/src/components/Loading.jsx";
 import { useEffect, useState } from "react";
 import { projects } from "@/api/github";
@@ -6,8 +6,8 @@ import ErrUI from "@/components/ErrUI";
 
 /**
  * component showing github repos, supporting keyword search
- * @param {*} param0 
- * @returns 
+ * @param {*} param0
+ * @returns
  */
 function Projects({ username, className }) {
   const [data, setData] = useState(null);
@@ -36,7 +36,7 @@ function Projects({ username, className }) {
       content = <p className="col-span-full text-center">No project matching your keyword, please try something else.</p>
     } else {
       content = filterRepos.map((proj, index) => (
-        <Card
+        <ProjectCard
           key={index}
           title={proj.name}
           link={proj.link}
