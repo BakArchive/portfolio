@@ -44,7 +44,6 @@ const projects = async (username) => {
         name: item.name,
         description: item.description,
         role: item.fork ? "Branch Maintainer" : "Project Owner",
-        techniques: item.topics,
         link: item.html_url,
       });
     }
@@ -54,4 +53,23 @@ const projects = async (username) => {
   return generalJsonFetch(url, {}, key, trim);
 };
 
-export { profile, projects };
+const projectDetail = async (username, projectName) => {
+  const url = `${api}/repos/${username}/${projectName}`
+  const key = projectName
+
+  function trim(origin) {
+    return {
+      name: origin.name,
+      role: origin.fork ? "Branch Maintainer" : "Project Owner",
+      link: origin.html_url,
+      description: origin.description,
+      license: origin.license? origin.license.name:null,
+      topics: origin.topics,
+      star: origin.stargazers_count,
+    }
+  }
+
+  return generalJsonFetch(url, {}, key, trim)
+};
+
+export { profile, projects, projectDetail };
