@@ -1,5 +1,5 @@
 // constants:
-const expiration = 24 * 60 * 60 * 1000; // the default cache expiration is 24 h
+const expiration = 5 * 60 * 1000; // the default cache expiration is 15 mins
 
 /**
  * check if the data in localstorage and validation
