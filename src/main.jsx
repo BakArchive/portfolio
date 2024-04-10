@@ -6,7 +6,7 @@ import RouteRule from '@/router'
 const router = createBrowserRouter([RouteRule]); // create router from route objects
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  // </React.StrictMode>
 )

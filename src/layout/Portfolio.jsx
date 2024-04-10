@@ -3,6 +3,8 @@ import SectionTitle from "@/components/SectionTitle";
 import Projects from "@/components/Projects";
 import GithubCalendar from "@/components/GithubCalendar";
 import config from "@/config";
+import {useOutletContext} from "react-router-dom";
+import { useEffect } from "react";
 
 /**
  * The portfolio page layout
@@ -10,6 +12,11 @@ import config from "@/config";
  */
 function Portfolio() {
   const conf = config.portfolio;
+  const setTitle = useOutletContext();
+
+  useEffect(()=>{
+    setTitle("Portfolio")
+  },[])
 
   return (
     <div className="animate__animated animate__fadeIn">

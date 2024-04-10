@@ -2,6 +2,8 @@ import Title from "@/components/Title";
 import SubTitle from "@/components/SubTitle";
 import Social from "@/components/Social";
 import config from "@/config";
+import {useOutletContext} from "react-router-dom";
+import { useEffect } from "react";
 
 /**
  * The home page layout
@@ -9,6 +11,12 @@ import config from "@/config";
  */
 function Home() {
   const conf = config.home;
+  const setTitle = useOutletContext();
+
+  useEffect(()=>{
+    setTitle("Home")
+  },[])
+
   return (
     <div className="flex flex-col md:flex-row gap-20 md:gap-0 animate__animated animate__fadeIn">
       <div className="md:w-2/3 lg:w-1/2 flex flex-col justify-center gap-5">

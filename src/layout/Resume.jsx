@@ -6,9 +6,16 @@ import Tags from "@/components/Tags";
 import TimeLine from "@/components/TimeLine";
 import AbilityRadar from "@/components/AbilityRadar";
 import config from "@/config";
+import {useOutletContext} from "react-router-dom";
+import { useEffect } from "react";
 
 function Resume() {
   const conf = config.resume;
+  const setTitle = useOutletContext();
+
+  useEffect(()=>{
+    setTitle("Resume")
+  },[])
 
   return (
     <div className="animate__animated animate__fadeIn">

@@ -4,6 +4,8 @@ import Content from "@/components/Content";
 import LeetCode from "@/components/LeetCode";
 import TMDB from "@/components/TMDB";
 import config from "@/config";
+import {useOutletContext} from "react-router-dom";
+import { useEffect } from "react";
 
 /**
  * The about page of the site, data from config file
@@ -11,6 +13,11 @@ import config from "@/config";
  */
 function About() {
   const conf = config.about;
+  const setTitle = useOutletContext();
+
+  useEffect(()=>{
+    setTitle("About")
+  },[])
 
   return (
     <div className="animate__animated animate__fadeIn">
