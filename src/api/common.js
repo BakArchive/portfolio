@@ -47,9 +47,17 @@ async function generalJsonFetch(url, options, key, trimCallback) {
 
   // fetch from API
   const resp = await fetch(url, options);
-  if (!resp.ok) throw new Error(`API error: ${resp.statusText || resp.status}`);
+  if (!resp.ok) throw new Error(`API error: ${errDict[resp.status] || resp.text() || resp.status}`);
   data = await resp.json();
   return lsStore(key, trimCallback(data));
+}
+
+// General error handling
+const errDict = {
+  401: "Not authorized, might caused by missing or wrong secret or credential",
+  403: "No authentication to access the API, please check your secret or credential",
+  404: "The resource is not exist",
+  500: "API server happens, please retry later",
 }
 
 export default generalJsonFetch;
