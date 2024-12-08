@@ -27,7 +27,7 @@ export default function RootLayout({
         <header className="fixed md:py-8 w-full flex justify-center z-10">
           <Nav />
         </header>
-        <main className="flex-1 z-0 flex flex-col">{children}</main>
+        <main className="flex-1 flex flex-col px-6 pt-16 md:pt-32">{children}</main>
         <footer className="py-6">
           <FootNote />
         </footer>
