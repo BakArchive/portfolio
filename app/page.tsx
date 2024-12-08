@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import lottieJson from "./animation/coding.json";
-import LottieAnimation from "./components/LottieAnimation";
 import TypedText from "./components/TypedText";
+import LottieAnimation from "./components/LottieAnimation";
 
 export const metadata: Metadata = {
   title: "Home | Portfolio",
@@ -24,7 +23,10 @@ export default function Home() {
           As <TypedText words={words} />
         </h2>
       </div>
-      <LottieAnimation animation={lottieJson} className="w-96" />
+      <LottieAnimation
+        animationPath="/animation/coding.json"
+        className="w-96"
+      />
     </div>
   );
 }
