@@ -25,7 +25,7 @@ export default function Home() {
       </div>
       <LottieAnimation
         animationPath="/animation/coding.json"
-        className="w-96"
+        className="max-w-96"
       />
     </div>
   );
