@@ -9,7 +9,7 @@ const year: number = new Date().getFullYear();
 
 export default function FootNote() {
   return (
-    <div className="flex justify-evenly gap-6">
+    <div className="flex flex-col items-center justify-center gap-2 md:flex-row md:justify-evenly">
       <p>Designed & Crafted by Muen Yu</p>
       <p>CopyRight ©{year} All rights reserved</p>
       <div className="flex gap-5">
