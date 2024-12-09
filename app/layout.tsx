@@ -24,10 +24,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col`}
       >
-        <header className="fixed md:py-8 w-full flex justify-center z-10">
+        <header className="bg-white shadow fixed w-full flex justify-center items-center h-20">
           <Nav />
         </header>
-        <main className="flex-1 flex flex-col pt-24 md:pt-0">{children}</main>
+        <main className="flex-1 flex flex-col pt-20">{children}</main>
         <footer className="py-6">
           <FootNote />
         </footer>

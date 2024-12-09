@@ -15,7 +15,7 @@ const words: string[] = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center md:flex-row h-full">
+    <div className="mt-2 flex flex-col items-center justify-center md:flex-row h-full">
       <div className="flex flex-col text-left md:w-[32rem] gap-5">
         <h1 className="text-6xl">Hello,</h1>
         <h1 className="text-6xl">I'm Muen Yu</h1>

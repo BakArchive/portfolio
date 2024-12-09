@@ -13,7 +13,7 @@ export default function Nav() {
   const pathname = usePathname(); // Get the current pathname
 
   return (
-    <nav className="shadow bg-base-100 flex flex-wrap justify-evenly py-4 md:rounded-full w-full md:w-[48rem]">
+    <nav className="flex flex-wrap justify-evenly w-3/4 md:w-1/2">
       {Object.entries(navItems).map(([path, label]) => (
         <Link
           href={path}
