@@ -37,12 +37,12 @@ export default function Carousel() {
           style={{ backgroundImage: `url(${selected.image})` }}
         ></div>
 
-        <div className="flex w-full justify-end flex-wrap p-4">
+        <div className="flex w-full justify-center md:justify-end flex-wrap p-4 gap-2">
           {experiences.map((exp) => (
             <button
               key={exp.id}
               onClick={() => setSelected(exp)}
-              className={`px-4 py-2 mx-2 text-sm font-bold ${
+              className={`px-4 py-2 text-sm font-bold ${
                 selected.id === exp.id
                   ? "bg-blue-500 text-white"
                   : "bg-gray-100 text-gray-800"
