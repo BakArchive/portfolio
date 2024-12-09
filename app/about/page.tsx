@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Carousel from "../components/Carousel";
 
 export const metadata: Metadata = {
     title: "About | Portfolio",
@@ -6,5 +7,5 @@ export const metadata: Metadata = {
 }
 
 export default function About() {
-    return <p>About</p>;
+    return <Carousel />
 }
