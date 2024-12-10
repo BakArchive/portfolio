@@ -1,11 +1,15 @@
 import { Metadata } from "next";
-import Carousel from "../components/Carousel";
+import ScrollContainer from "../components/ScrollContainer";
 
 export const metadata: Metadata = {
-    title: "About | Portfolio",
-    description: "About page of my portfolio"
-}
+  title: "About | Portfolio",
+  description: "About page of my portfolio",
+};
 
 export default function About() {
-    return <Carousel />
+  return (
+    <>
+      <ScrollContainer />
+    </>
+  );
 }

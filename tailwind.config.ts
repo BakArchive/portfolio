@@ -8,6 +8,7 @@ export default {
   ],
   theme: {
     extend: {
+      scrollBehavior: ['smooth'],
       keyframes: {
         moveBackground: {
           "0%": { backgroundPosition: "0% 50%" },
