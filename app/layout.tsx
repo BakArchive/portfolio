@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ThemeSwitch from "./components/ThemeSwitch";
+import Nav from "./components/Nav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,12 +24,26 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const time: number = new Date().getFullYear();
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col`}
       >
-        {children}
+        <>
+          <header className="py-8 w-full flex justify-center animate__animated animate__fadeInDown">
+            <Nav className="w-full md:w-4/5 lg:w-1/3" />
+          </header>
+          <main className="flex-grow px-5 w-full md:w-4/5 m-auto flex flex-col">
+            {children}
+          </main>
+          <footer className="py-4 animate__animated animate__fadeInUp">
+            <p className="text-center">
+              Crafted by Muen Yu | {time} All rights reserved
+            </p>
+          </footer>
+          <ThemeSwitch className="fixed bottom-10 right-10" />
+        </>
       </body>
     </html>
   );
