@@ -9,10 +9,9 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <div className="h-full flex flex-col gap-4 justify-center items-center">
-      <LottieAnimation
-        animationPath="/animation/notfound.json"
-        className="w-60 h-60"
-      />
+      <div className="w-60 h-60">
+        <LottieAnimation animationPath="/animation/notfound.json" />
+      </div>
       <h1 className="text-6xl">Not Found</h1>
     </div>
   );

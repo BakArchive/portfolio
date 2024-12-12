@@ -25,12 +25,10 @@ const LottiePlayer = dynamic<LottiePlayerProps>(
 
 interface LottieAnimationProps {
   animationPath: string;
-  className?: string;
 }
 
 export default function LottieAnimation({
   animationPath,
-  className,
 }: LottieAnimationProps) {
   return (
     <LottiePlayer
@@ -39,7 +37,7 @@ export default function LottieAnimation({
       speed={1}
       loop
       autoplay
-      className={className}
+      className="w-full h-full"
     />
   );
 }
