@@ -1,16 +1,15 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-export default function ThemeSwitch({ className }: { className?: string }) {
-  const [theme, setTheme] = useState<boolean>(false);
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme) {
-      setTheme(JSON.parse(storedTheme));
-    }
-  }, []);
-
+export default function ThemeSwitch({
+  theme,
+  setTheme,
+  className,
+}: {
+  theme: boolean;
+  setTheme: any;
+  className?: string;
+}) {
   useEffect(() => {
     localStorage.setItem("theme", JSON.stringify(theme));
   }, [theme]);
