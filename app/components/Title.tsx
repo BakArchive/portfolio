@@ -10,16 +10,12 @@ function Title({
   highlight,
   className,
 }: {
-  text?: string;
-  highlight?: string;
+  text: string;
+  highlight: string;
   className?: string;
 }) {
   return (
-    <h1
-      className={`font-medium text-4xl md:text-6xl lg:text-7xl ${
-        className || ""
-      }`}
-    >
+    <h1 className={`font-medium text-4xl md:text-6xl lg:text-7xl ${className}`}>
       {text} <ColorFont text={highlight} />
     </h1>
   );
