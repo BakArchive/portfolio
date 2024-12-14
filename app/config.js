@@ -95,6 +95,8 @@ const config = {
     ],
   },
   skills: {
+    title: "I'm",
+    highlight: "Professional",
     skills: [
       "HTML",
       "CSS",
@@ -136,7 +138,7 @@ const config = {
   },
   portfolio: {
     title: "I'm",
-    highlight: "productive",
+    highlight: "Productive",
     subTitle: "All Open Source Project I Involved",
     github: "muenyu",
   },

@@ -1,0 +1,36 @@
+export default function ProjectCard({
+  title,
+  subTitle,
+  content,
+  link,
+  tags,
+  className,
+}: {
+  title?: string;
+  subTitle?: string;
+  content?: string;
+  link?: string;
+  tags?: string[];
+  className?: string;
+}) {
+  return (
+    <div
+      className={`card bg-base-100 hover:bg-base-200 shadow-xl ${className}`}
+    >
+      <a target="_blank" href={link} className="card-compact">
+        <div className="card-body flex flex-col justify-between">
+          <h2 className="card-title text-lg font-semibold">{title}</h2>
+          <p className="text-base">{subTitle}</p>
+          <p className="text-sm">{content}</p>
+          <div className="card-actions justify-center mt-auto">
+            {tags?.map((item, idx) => (
+              <div key={idx} className="badge badge-md gap-1">
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </a>
+    </div>
+  );
+}
