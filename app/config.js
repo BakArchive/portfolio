@@ -101,6 +101,7 @@ const config = {
       "HTML",
       "CSS",
       "JavaScript",
+      "NextJS",
       "C#",
       "Figma",
       "Git",
