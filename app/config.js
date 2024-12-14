@@ -87,7 +87,7 @@ const config = {
           {
             section: "Award",
             detail:
-              "At year 3, I was a member of group that represents the university to take part in the 8th Lan Qiao Cup National Software Development Contest, and won the National Excellent Award in that match.",
+              "National Excellent Award in the 8th Lan Qiao Cup National Software Development Contest (JAVA)",
           },
         ],
       },
@@ -122,17 +122,20 @@ const config = {
     qualifications: [
       {
         name: "AWS Certified Solutions Architect – Associate",
+        img: "/saa.png",
         link: "https://www.credly.com/badges/8d20efe6-9220-42b6-beaa-79fc33e8f526",
         detail: "Expires on February 23, 2027",
       },
       {
         name: "AWS Certified Developer – Associate",
+        img: "/dva.png",
         link: "https://www.credly.com/badges/a6a64eed-74fe-412b-b691-0c9683f1ca97",
         detail: "Expires on February 12, 2027",
       },
       {
         name: "PTE Academic English Test",
-        detail: "Overall: 66",
+        img: "/pte.png",
+        detail: "Overall: 83; Speaking: 90, Reading: 76, Writing: 86, Listening: 90",
       },
     ],
   },

@@ -1,3 +1,5 @@
+import Tags from "./Tags";
+
 export default function ProjectCard({
   title,
   subTitle,
@@ -22,13 +24,7 @@ export default function ProjectCard({
           <h2 className="card-title text-lg font-semibold">{title}</h2>
           <p className="text-base">{subTitle}</p>
           <p className="text-sm">{content}</p>
-          <div className="card-actions justify-center mt-auto">
-            {tags?.map((item, idx) => (
-              <div key={idx} className="badge badge-md gap-1">
-                {item}
-              </div>
-            ))}
-          </div>
+          <Tags list={tags} tagClassName="btn-sm" />
         </div>
       </a>
     </div>
