@@ -10,9 +10,8 @@ export const metadata: Metadata = {
   description: "Home page of my portfolio",
 };
 
+const conf = config.home;
 export default function Home() {
-  const conf = config.home;
-
   return (
     <div className="h-full flex flex-col md:flex-row gap-20 md:gap-0 animate__animated animate__fadeIn">
       <div className="md:w-2/3 lg:w-1/2 flex flex-col justify-center gap-5">

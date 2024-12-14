@@ -13,111 +13,45 @@ const config = {
   },
   about: {
     title: "I'm",
-    highlight: "multifaceted",
-    sections: [
-      {
-        title: "Blogger",
-        type: 0, // 0 normal, 1 leetcode, 2 tmdb
-        content:
-          "Over the years since 2017, my blog has been a canvas for sharing my evolving experiences and thoughts, capturing a journey of personal growth and exploration. Each post reflects a chapter of my life, offering insights, reflections, and moments that have shaped me along the way.",
-      },
-      {
-        title: "HomeLab Player",
-        type: 0, // 0 normal, 1 leetcode, 2 tmdb
-        content:
-          "In early 2022, I built my own personal server at my home. It serves storage based on ZFS and self-hosted services managed by K3s, so I can deploy various docker images upon it. With the connectivity of Cloudflare, I can access them everywhere to improve my efficiency and protect my data security. Now, it plays an important role in my daily life and I am satisfied with how it works.",
-      },
-      {
-        title: "LeetCoder",
-        type: 1, // 0 normal, 1 leetcode, 2 tmdb
-        content:
-          "The most attractive thing to me on LeetCode is when someone's algorithm effectively solving a question which made me headache, which always blows my mind. Now I try to post my own solutions on LeetCode to reinforce my understanding to them.",
-        username: "muenyu",
-      },
-      {
-        title: "Bilingual",
-        type: 0, // 0 normal, 1 leetcode, 2 tmdb
-        content:
-          "I can speak two languages: Mandarin and English. In my opinion, language is the bridge to connect people from another race/nation, so multilinguals can usually gain richer life experience from a larger world. I am committed to become a multilingual, and Japanese will be my next goal after English.",
-      },
-      // {
-      //   title: "Anime Fan",
-      //   type: 2, // 0 normal, 1 leetcode, 2 tmdb
-      //   content:
-      //     "I appreciate the artistry and storytelling found in Japanese anime.",
-      //   list: "8294767",
-      // },
-    ],
-  },
-  resume: {
-    title: "I'm",
-    highlight: "professional",
+    highlight: "Experienced",
     intro:
       "I am a person with a strong curiosity, and it propels me towards the field of technology. I can feel my passion and eagerness for new knowledge and open source. I believe that learning by doing is the best strategy for me, and I have gained a lot of practical skills through this approach. In the future, I want to become a full-stack developer who knows every detail in software development process.",
-    radar: [
-      {
-        key: "Development",
-        value: 10,
-      },
-      {
-        key: "Security",
-        value: 6,
-      },
-      {
-        key: "Algorithm",
-        value: 6,
-      },
-      {
-        key: "Operation",
-        value: 8,
-      },
-      {
-        key: "Soft-Skill",
-        value: 6,
-      },
-      {
-        key: "Testing",
-        value: 4,
-      },
-    ],
-    skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "C#",
-      "Figma",
-      "Git",
-      "Python",
-      "Golang",
-      "Flask",
-      "Gin",
-      "React",
-      "Vue",
-      "Vite",
-      "Bootstrap",
-      "Tailwind",
-      "MySQL",
-      "Redis",
-      "AWS",
-      "Linux",
-      "Docker",
-    ],
     experience: [
       {
-        // time line
-        time: "2015.09 ~ 2019.07",
-        // experience title
-        role: "BSc Student in Computer Science in Wuhan University of Science & Technology",
-        // what's your achievement during that time, describe them in key-value format
+        time: "2023.02 ~ 2024.12",
+        role: "MSc Student in IT (Computer Science Major) at Queensland University of Technology",
         sections: [
           {
             section: "GPA",
-            detail: "3.16/4",
+            detail: "6.75/7",
           },
           {
-            section: "Award",
+            section: "Key Units",
+            detail: "Data Structure and Advanced Algorithms, Web and Mobile Application Development, Network System, Object Oriented Design, Cloud Computing, Data Mining, Artificial Intelligence and Machine Learning, Principles of Software Security"
+          },
+          {
+            section: "Achievements",
+            detail: "2023 & 2024 Academic Excellence, QUT Executive Deans’ Commendation",
+          },
+        ],
+      },
+      {
+        time: "2021.02 ~ 2022.07",
+        role: "Game Server Development Engineer at SAGI GAMES Co., LTD",
+        sections: [
+          {
+            section: "Experience",
             detail:
-              "At year 3, I was a member of group that represents the university to take part in the 8th Lan Qiao Cup National Software Development Contest, and won the National Excellent Award in that match.",
+              "I have extensive experience as a backend developer, specializing in the development and maintenance of various game servers, control panels, internal systems, and websites. I have successfully implemented a wide range of features and functionalities, collaborated with stakeholders to gather requirements, and deployed projects on cloud servers.",
+          },
+          {
+            section: "Skills Developed",
+            detail:
+              "Through my roles, I have honed my skills in backend development using languages such as Golang, Python, and frameworks like Flask and Gin. I have expertise in database management with MySQL and Redis, as well as containerization using Docker and Kubernetes. Additionally, I have experience in API development, system integration, and deployment on cloud platforms.",
+          },
+          {
+            section: "Achievements",
+            detail: `I have successfully developed and deployed game server APIs for popular games like "Back into Space" and mini game servers. I have implemented key features such as Google account login, in-app purchases, Vivo account login, and WeChat message push. Furthermore, I have containerized these projects, configured load balancing, and maintained multiple server instances. My achievements also include developing internal systems for personnel management and creating official websites for the company and landing pages for games.`,
           },
         ],
       },
@@ -143,40 +77,45 @@ const config = {
         ],
       },
       {
-        time: "2021.02 ~ 2022.07",
-        role: "Game Server Development Engineer at SAGI GAMES Co., LTD",
-        sections: [
-          {
-            section: "Experience",
-            detail:
-              "I have extensive experience as a backend developer, specializing in the development and maintenance of various game servers, control panels, internal systems, and websites. I have successfully implemented a wide range of features and functionalities, collaborated with stakeholders to gather requirements, and deployed projects on cloud servers.",
-          },
-          {
-            section: "Skills Developed",
-            detail:
-              "Through my roles, I have honed my skills in backend development using languages such as Golang, Python, and frameworks like Flask and Gin. I have expertise in database management with MySQL and Redis, as well as containerization using Docker and Kubernetes. Additionally, I have experience in API development, system integration, and deployment on cloud platforms.",
-          },
-          {
-            section: "Achievements",
-            detail: `I have successfully developed and deployed game server APIs for popular games like "Back into Space" and mini game servers. I have implemented key features such as Google account login, in-app purchases, Vivo account login, and WeChat message push. Furthermore, I have containerized these projects, configured load balancing, and maintained multiple server instances. My achievements also include developing internal systems for personnel management and creating official websites for the company and landing pages for games.`,
-          },
-        ],
-      },
-      {
-        time: "2023.02 ~ Present",
-        role: "MSc Student in IT (Computer Science Major) at Queensland University of Technology",
+        time: "2015.09 ~ 2019.07",
+        role: "BSc Student in Computer Science in Wuhan University of Science & Technology",
         sections: [
           {
             section: "GPA",
-            detail: "6.75/7",
+            detail: "3.16/4",
           },
           {
-            section: "Certificate",
+            section: "Award",
             detail:
-              "To prepare my future career in Australia, I leveraged the summer vacation to obtain AWS Solution Architect Associate and AWS Certified Developer Associate through self-taught with my existing experience.",
+              "At year 3, I was a member of group that represents the university to take part in the 8th Lan Qiao Cup National Software Development Contest, and won the National Excellent Award in that match.",
           },
         ],
       },
+
+    ],
+  },
+  skills: {
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "C#",
+      "Figma",
+      "Git",
+      "Python",
+      "Golang",
+      "Flask",
+      "Gin",
+      "React",
+      "Vue",
+      "Vite",
+      "Bootstrap",
+      "Tailwind",
+      "MySQL",
+      "Redis",
+      "AWS",
+      "Linux",
+      "Docker",
     ],
     qualifications: [
       {
