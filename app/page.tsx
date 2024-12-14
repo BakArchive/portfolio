@@ -3,6 +3,7 @@ import config from "./config";
 import Title from "./components/Title";
 import SubTitle from "./components/SubTitle";
 import Social from "./components/Social";
+import LottieAnimation from "./components/LottieAnimation";
 
 export const metadata: Metadata = {
   title: "Home | Portfolio",
@@ -20,7 +21,7 @@ export default function Home() {
         <Social social={conf.social} className="mt-5" />
       </div>
       <figure className="m-auto md:w-1/3 lg:w-1/2 flex items-center justify-center">
-        <img className="w-2/3 min-w-52 md:min-w-72 md:w-full" src="/hero.png" />
+        <LottieAnimation animationPath="/animation/hi.json" />
       </figure>
     </div>
   );
