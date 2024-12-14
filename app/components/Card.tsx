@@ -1,5 +1,3 @@
-import Tags from "./Tags";
-
 export default function Card({
   title,
   content,
